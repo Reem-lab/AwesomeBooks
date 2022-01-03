@@ -8,3 +8,26 @@
     flex-direction: column;
     gap: 20px;
 }
+
+.info {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.empty-div {
+    width: 100%;
+    position: relative;
+  }
+  
+  .empty-div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 3px;
+    background-color: var(--orange);
+  }

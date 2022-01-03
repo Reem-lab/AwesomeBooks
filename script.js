@@ -1,17 +1,17 @@
 const btn = document.querySelector('.add');
 const heading = document.querySelector('.heading');
 
-const bookContainer = document.createElement('div');
-bookContainer.classList.add('bookContainer');
-heading.appendChild(bookContainer);
 
-const titleBook = document.createElement('label');
+
+
+
+/*const titleBook = document.createElement('label');
 titleBook.classList.add('titleBook');
 titleBook.appendChild(bookContainer);
 
 const authorBook = document.createElement('label');
 authorBook.classList.add('authorBook');
-authorBook.appendChild(bookContainer);
+authorBook.appendChild(bookContainer);*/
 
 
 const books = [
@@ -25,6 +25,22 @@ const books = [
     }
 ]
 
+const displayInformation = function (){
+    for (let i=0; i<books.length; i += 1) {
+        const bookContainer = document.createElement('div');
+        bookContainer.classList.add('bookContainer');
+        bookContainer.innerHTML = `
+        <label>Title: </label>
+        <p id="titleBook">${books[i].title}</p>
+        <label>Author:  </label>
+        <p id="authorBook">${books[i].author}</p>
+        `;
+        heading.append(bookContainer);
+    }
+}
+
+
+
 
 
 btn.addEventListener('click', function(e){
@@ -33,5 +49,7 @@ btn.addEventListener('click', function(e){
    const title = document.querySelector('.title').value;
    const author = document.querySelector('.author').value;
     books.push({title , author})
-    console.log(books);
+    displayInformation();
 });
+
+console.log(books);

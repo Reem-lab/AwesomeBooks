@@ -27,8 +27,11 @@ const books = [
 
 
 
-
 btn.addEventListener('click', function(e){
     e.preventDefault();
-     
+   console.log(e.target)
+   const title = document.querySelector('.title').value;
+   const author = document.querySelector('.author').value;
+    books.push({title , author})
+    console.log(books);
 });

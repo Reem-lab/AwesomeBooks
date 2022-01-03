@@ -1,5 +1,6 @@
 const btn = document.querySelector('.add');
 const heading = document.querySelector('.heading');
+const remove = document.querySelector('.remove');
 
 
 
@@ -30,16 +31,14 @@ const displayInformation = function (){
         const bookContainer = document.createElement('div');
         bookContainer.classList.add('bookContainer');
         bookContainer.innerHTML = `
-        <label>Title: </label>
-        <p id="titleBook">${books[i].title}</p>
-        <label>Author:  </label>
-        <p id="authorBook">${books[i].author}</p>
+        <p class="info" id="titleBook">${books[i].title}</p>
+        <div class="empty-div"></div>
+        <p class="info" id="authorBook">${books[i].author}</p>
+        <button class="remove">Remove</button>
         `;
         heading.append(bookContainer);
     }
 }
-
-
 
 
 
@@ -52,4 +51,13 @@ btn.addEventListener('click', function(e){
     displayInformation();
 });
 
-console.log(books);
+// document.addEventListener('load',function(){
+//     displayInformation();
+// });
+
+
+   remove.addEventListener('click', function(e){
+    e.preventDefault();
+    console.log(e.target());
+    //heading.classList.remove('bookContainer')
+});

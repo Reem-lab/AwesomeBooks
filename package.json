@@ -21,5 +21,15 @@
   "bugs": {
     "url": "https://github.com/Reem-lab/AwesomeBooks/issues"
   },
-  "homepage": "https://github.com/Reem-lab/AwesomeBooks#readme"
+  "homepage": "https://github.com/Reem-lab/AwesomeBooks#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
 }

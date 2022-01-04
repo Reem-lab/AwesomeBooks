@@ -5,7 +5,7 @@ function Book (title, author) {
 }
 
 const deleteBook = (title, author) => {
-    books.filter((book) => book.title !== title || book.author !== author);
+    books = books.filter((book) => book.title !== title || book.author !== author);
 }
 
 const setLocalStorage = (books) => {
@@ -20,6 +20,7 @@ function showBook(book) {
     const titleBook = document.createElement('P');
     const authorBook = document.createElement('P');
     const deleteBtn = document.createElement('BUTTON');
+    const hr = document.createElement('hr');
     deleteBtn.textContent = 'Remove';    
 
     titleBook.textContent = book.title;
@@ -29,6 +30,8 @@ function showBook(book) {
     bookDiv.appendChild(titleBook);
     bookDiv.appendChild(authorBook);
     bookDiv.appendChild(deleteBtn);
+    bookDiv.appendChild(hr);
+
 
     bookContainer.appendChild(bookDiv);
 
@@ -63,7 +66,10 @@ form.addEventListener('submit', (e) => {
     inpAutor.value = '';
 });
 
+
+
 document.addEventListener('DOMContentLoaded', () => {    
+    
     if (localStorage.getItem('books') !== null) {
         const myBooks = JSON.parse(localStorage.getItem('books'));
         books = myBooks;

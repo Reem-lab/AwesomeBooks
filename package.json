@@ -1,0 +1,25 @@
+{
+  "name": "awesomebooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hint": "npx hint .",
+    "hintf": "npx hint --fix .",
+    "lint": "npx eslint .",
+    "lintf": "npx eslint --fix .",
+    "style": "npx stylelint \"**/*.{css,scss}\"",
+    "stylef": "npx stylelint --fix \"**/*.{css,scss}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reem-lab/AwesomeBooks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reem-lab/AwesomeBooks/issues"
+  },
+  "homepage": "https://github.com/Reem-lab/AwesomeBooks#readme"
+}

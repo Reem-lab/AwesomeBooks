@@ -1,5 +1,7 @@
 
-
+.heading {
+    text-align: center;
+}
 
 .ul-list {
     display: flex;
@@ -18,4 +20,11 @@
     font-size: 20px;
     font-weight: normal;
 }
+
+
+.book-container div {
+    display: flex;
+    gap: 4px;
+  }
+  
 

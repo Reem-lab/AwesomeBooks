@@ -80,20 +80,24 @@ const bookContainer = document.querySelector('.book-container');
 const inpTitle = document.querySelector('#title');
 const inpAutor = document.querySelector('#author');
 
-let books = [];
 class Book {
+
+    static collection = [];
+
     constructor(title, author){
         this.title = title;
         this.author = author;
     }
-    deleteBook (title, author){
-        books = books.filter((book) => book.title !== title || book.author !== author);
-    }
-    setLocalStorage(books){
-        const data = JSON.stringify(books);
+
+    static setLocalStorage=() => {
+        const data = JSON.stringify(Book.collection);
         localStorage.setItem('books', data);
     }
 
+    deleteBook = (title, author) => {
+        Book.collection = Book.collection.filter((book) => book.title !== title || book.author !== author);
+    }
+    
     showBook(book) {
         const bookDiv = document.createElement('DIV');
         const titleBook = document.createElement('P');
@@ -104,38 +108,33 @@ class Book {
 
         titleBook.textContent = book.title;
         authorBook.textContent = book.author;
-
     
         bookDiv.appendChild(titleBook);
         bookDiv.appendChild(authorBook);
         bookDiv.appendChild(deleteBtn);
-        bookDiv.appendChild(hr);
-    
+        bookDiv.appendChild(hr);    
     
         bookContainer.appendChild(bookDiv);
-    
         deleteBtn.addEventListener('click', () => {
             this.deleteBook(book.title, book.author);
-            this.setLocalStorage(books);
+            Book.setLocalStorage(Book.collection);
             bookContainer.removeChild(bookDiv);
-        });
+        });    
     }
 
     iterateBooks() {
-        books.forEach((book) => {
+        Book.collection.forEach((book) => {
           this.showBook(book);
-         });
-      }
+        });
+    }
 
     saveBooks () {
         const book = new Book(inpTitle.value, inpAutor.value);    
-        books.push(book);
-        this.setLocalStorage(books);
+        Book.collection.push(book);
+        Book.setLocalStorage(Book.collection);
         this.showBook(book);
     }
-
 }
-
 
 const book = new Book();
  
@@ -151,8 +150,7 @@ form.addEventListener('submit', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('books') !== null) {
         const myBooks = JSON.parse(localStorage.getItem('books'));
-        books = myBooks;
-    }
-    
-    book.iterateBooks();    
+        Book.collection = myBooks;
+    }    
+    book.iterateBooks();
 });

@@ -89,7 +89,7 @@ class Book {
     deleteBook (title, author){
         books = books.filter((book) => book.title !== title || book.author !== author);
     }
-    setLocalStorage(books){
+     setLocalStorage(books){
         const data = JSON.stringify(books);
         localStorage.setItem('books', data);
     }

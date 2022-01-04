@@ -1,55 +1,53 @@
-
-const btn = document.querySelector('.add');
-const heading = document.querySelector('.heading');
-
-const books = [
-    {
-        title : 'Natural',
-        author : 'Reem',
-    },
-    {
-        title : 'intro to js',
-        author : 'Fernando',
-    }
-]
-
-const displayInformation = function (){
-    for (let i=0; i<books.length; i += 1) {
-        const bookContainer = document.createElement('div');
-        bookContainer.classList.add('bookContainer');
-        bookContainer.innerHTML = `
-        <p class="info" id="titleBook">${books[i].title}</p>
-        <p class="info" id="authorBook">${books[i].author}</p>
-        <button id="remove" class="remove">Remove</button>
-        <hr>
-        `;
-        heading.append(bookContainer);
-    }
+let books = [];
+function Book (title, author) {
+    this.title = title;
+    this.author = author;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-        displayInformation();
-        const remove = document.querySelectorAll('.remove'); 
-        remove.addEventListener('click', () => {
-        alert("HIIII");
+const deleteBook = (title, author) => {
+    books.filter((book) => book.title !== title || book.author !== author);
+}
+
+const bookContainer = document.querySelector('.book-container');
+
+function showBook(book) {
+    const bookDiv = document.createElement('DIV');
+    const titleBook = document.createElement('P');
+    const authorBook = document.createElement('P');
+    const deleteBtn = document.createElement('BUTTON');
+    deleteBtn.textContent = 'Remove';    
+
+    titleBook.textContent = book.title;
+    authorBook.textContent = book.author;
+    
+
+    bookDiv.appendChild(titleBook);
+    bookDiv.appendChild(authorBook);
+    bookDiv.appendChild(deleteBtn);
+
+    bookContainer.appendChild(bookDiv);
+
+    deleteBtn.addEventListener('click', () => {
+        deleteBook(book.title, book.author);
+        bookContainer.removeChild(bookDiv);
     });
-});
+}
 
-btn.addEventListener('click', function(e){
+const inpTitle = document.querySelector('#title');
+const inpAutor = document.querySelector('#author');
+
+function saveBooks () {
+    const book = new Book(inpTitle.value, inpAutor.value);    
+    books.push(book);    
+    showBook(book);
+}
+
+const form = document.querySelector('.form')
+form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(e.target)
-    const title = document.querySelector('.title').value;
-    const author = document.querySelector('.author').value;
-    books.push({title , author})
-    displayInformation();
+    saveBooks();
 });
 
-
-/*var remove = function(removeID){
-    var index = array.indexOf(removeID);
-    if (index>-1) {
-        array.splice(index, 1);
-    }
-}*/
-
-
+document.addEventListener('DOMContentLoaded', () => {    
+    
+});

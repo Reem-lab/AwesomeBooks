@@ -1,11 +1,16 @@
 
 
-.form {
+
+.ul-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    list-style: none;
+    padding: 0;
 }
 
+.ul-list li {
+    margin-top: 5px;
+}
 .info {
     margin: 0;
     padding: 0;

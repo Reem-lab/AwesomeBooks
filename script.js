@@ -11,10 +11,10 @@ const deleteBook = (title, author) => {
 const bookContainer = document.querySelector('.book-container');
 
 function showBook(book) {
-    const bookDiv = document.createElement('DIV');
-    const titleBook = document.createElement('P');
-    const authorBook = document.createElement('P');
-    const deleteBtn = document.createElement('BUTTON');
+    const bookDiv = document.createElement('div');
+    const titleBook = document.createElement('p');
+    const authorBook = document.createElement('p');
+    const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Remove';    
 
     titleBook.textContent = book.title;
@@ -33,6 +33,8 @@ function showBook(book) {
     });
 }
 
+
+
 const inpTitle = document.querySelector('#title');
 const inpAutor = document.querySelector('#author');
 
@@ -41,6 +43,26 @@ function saveBooks () {
     books.push(book);    
     showBook(book);
 }
+
+//Local storage
+function saveLocalStore() {
+    const data = {
+      title: inpTitle.value,
+      author: inpAutor.value,
+    };
+    localStorage.setItem('data', JSON.stringify(data));
+  }
+
+
+inpTitle.addEventListener('input', saveLocalStore);
+inpAutor.addEventListener('input', saveLocalStore);
+
+
+window.addEventListener('load', () => {
+    const data = JSON.parse(localStorage.getItem('data'));
+    inpTitle.value = data.title;
+    inpAutor.value = data.author;
+  });
 
 const form = document.querySelector('.form')
 form.addEventListener('submit', (e) => {
@@ -51,3 +73,8 @@ form.addEventListener('submit', (e) => {
 document.addEventListener('DOMContentLoaded', () => {    
     
 });
+
+
+
+
+

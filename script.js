@@ -19,9 +19,9 @@ const displayInformation = function (){
         bookContainer.classList.add('bookContainer');
         bookContainer.innerHTML = `
         <p class="info" id="titleBook">${books[i].title}</p>
-        <div class="empty-div"></div>
         <p class="info" id="authorBook">${books[i].author}</p>
         <button id="remove" class="remove">Remove</button>
+        <hr>
         `;
         heading.append(bookContainer);
     }
@@ -29,7 +29,7 @@ const displayInformation = function (){
 
 document.addEventListener('DOMContentLoaded', () => {
         displayInformation();
-        const remove = document.querySelector('#remove');
+        const remove = document.querySelectorAll('.remove'); 
         remove.addEventListener('click', () => {
         alert("HIIII");
     });

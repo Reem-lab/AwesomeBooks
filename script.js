@@ -85,6 +85,7 @@ class Book {
         const bookDiv = document.createElement('DIV');
         const bookTitle = document.createElement('p');
         const deleteBtn = document.createElement('BUTTON');
+        deleteBtn.classList.add('btn-remove');
 
         let title = '"' + book.title + '" by ' + book.author;
         bookTitle.textContent = title;

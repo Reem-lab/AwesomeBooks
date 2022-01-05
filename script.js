@@ -101,3 +101,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   book.iterateBooks();
 });
+
+const navbar = document.querySelector('.link-list')

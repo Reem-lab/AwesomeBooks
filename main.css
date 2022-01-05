@@ -14,17 +14,15 @@
   padding: 0;
 }
 
-
 .errorMsg {
   background-color: #fff;
   width: 70%;
+
   /* margin: 10px; */
   color: black;
   border-radius: 8px;
   font-weight: normal;
   align-self: center;
-  background-color: gray;
-  border-radius: 8px;
   text-align: center;
   margin-left: 65px;
 }
@@ -32,7 +30,6 @@
 .hidden {
   display: none;
 }
-
 
 .close-modal {
   position: relative;

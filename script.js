@@ -15,7 +15,7 @@ class Book {
     }
 
     deleteBook = (title, author) => {
-        Book.collection = Book.collection.filter((book) => book.title !== title
+      Book.collection = Book.collection.filter((book) => book.title !== title
         || book.author !== author);
     }
 
@@ -53,7 +53,6 @@ class Book {
     }
 }
 
-
 const msg = document.querySelector('#errorMsg');
 const exbtn = document.createElement('button');
 
@@ -62,10 +61,10 @@ function checkRepetition(book) {
     const currentBook = Book.collection[i];
     if (currentBook.title.toLowerCase() === book.title.toLowerCase()
     && currentBook.author.toLowerCase() === book.author.toLowerCase()) {
-       msg.textContent = ' ❗ This Book is Already in the list';
-         exbtn.textContent = 'X'
-         exbtn.classList.add('close-modal');
-         msg.appendChild(exbtn);
+      msg.textContent = ' ❗ This Book is Already in the list';
+      exbtn.textContent = 'X';
+      exbtn.classList.add('close-modal');
+      msg.appendChild(exbtn);
 
       return false;
     }
@@ -73,9 +72,9 @@ function checkRepetition(book) {
   return true;
 }
 
-exbtn.addEventListener('click', function(){
+exbtn.addEventListener('click', () => {
   msg.classList.add('hidden');
-})
+});
 
 function addBookToLibrary() {
   const inputTitleValue = inpTitle.value;
@@ -85,7 +84,6 @@ function addBookToLibrary() {
     book.saveBooks();
   }
 }
-
 
 const book = new Book();
 const form = document.querySelector('.form');

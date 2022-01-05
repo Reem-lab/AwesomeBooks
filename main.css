@@ -88,6 +88,10 @@
   margin-top: 10px;
 }
 
+.alert {
+  background-color: brown;
+}
+
 @media screen and (min-width: 772px) {
   .sec {
     padding: 10px 150px 150px 150px;

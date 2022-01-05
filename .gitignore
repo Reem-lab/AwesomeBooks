@@ -1,3 +1,5 @@
 node_modules
 package-lock.json
-hint-report
+.eslintrc.json
+.hintrc
+.stylelintrc.json

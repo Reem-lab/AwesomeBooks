@@ -1,40 +1,54 @@
-# Awesome books
+<!-- Feel Free to Add, Update, Delete Any Section you find needs so -->
 
-Awesome books" is a website that displays a list of books and lets to add and remove them.
+# AwesomeBooks
 
-![Captura](https://user-images.githubusercontent.com/91301423/148096615-0a3c5f5d-bea0-4d7f-bf38-be0dd146231b.PNG)
+> .This project is BookStore so the user can add books by just enter Book name and the author After the user add it,
+it already displayed in the top of the page and can remove it by remove button.
 
-
-## Features
-
-- The website has a page who display books.
-- Books can be added using the form.
-- Books can be removed using the remove button.
-
+<img src="Capture.PNG" width="70%" />
 
 ## Built With
 
-- HTML
-- CSS
-- Javascript
+- Languages: _**HTML, CSS, JavaScript**_
+- Frameworks: _**N/A**_
+- Technologies used: _**GIT, GITHUB, LINTERS**_
+
+## Additional tools
+ - Google fonts
+
+## Live Demo
+
+[See My project Live here]()
+
+
 
 ## Authors
 
-👤 **Fernando Herrera**
+<!-- Only Change Username for Different Accounts -->
 
-- GitHub: [@fherrerao](https://github.com/fherrerao)
-- Twitter: [@fherrera0206](https://twitter.com/fherrera0206)
+👤 **Reem**
 
-👤 **Reem Janina**
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@Reem-lab](https://github.com/Reem-lab)
+ **Twitter** | [Rem79940127](https://twitter.com/Rem79940127)
+ **LinkdIn** | [reem-janina](https://www.linkedin.com/in/reem-janina-ab74ab21a/)
 
-- GitHub: [@Reem-lab](https://github.com/Reem-lab)
+ 👤 **Fernando**
+
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@fherrerao](https://github.com/fherrerao)
+ **Twitter** | [fherrera0206](https://twitter.com/fherrera0206)
+ **LinkdIn** | [Fernando-Herrera](https://www.linkedin.com/in/fernando-herrera-25a6361b2/)
+
 
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/MrRamoun/WEBDEV/issues).
 
 ## Show your support
 
@@ -42,9 +56,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Linters: [Microverse](https://github.com/microverseinc/linters-config)
-- Readme template: [Microverse](https://github.com/microverseinc/readme-template)
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](/LICENSE) licensed.

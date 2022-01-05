@@ -39,8 +39,8 @@ it already displayed in the top of the page and can remove it by remove button.
  Platform | Badge |
  --- | --- |
  **GitHub**  | [@fherrerao](https://github.com/fherrerao)
- **Twitter** | [Rem79940127](https://twitter.com/fherrera0206)
- **LinkdIn** | [reem-janina](https://www.linkedin.com/in/fernando-herrera-25a6361b2/)
+ **Twitter** | [fherrera0206](https://twitter.com/fherrera0206)
+ **LinkdIn** | [Fernando-Herrera](https://www.linkedin.com/in/fernando-herrera-25a6361b2/)
 
 
 

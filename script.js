@@ -9,14 +9,14 @@ class Book {
       this.author = author;
     }
 
-    static setLocalStorage=() => {
+    static setLocalStorage = () => {
       const data = JSON.stringify(Book.collection);
       localStorage.setItem('books', data);
     }
 
     deleteBook = (title, author) => {
-      Book.collection = Book.collection.filter((book) => book.title !== title
-      || book.author !== author);
+        Book.collection = Book.collection.filter((book) => book.title !== title
+        || book.author !== author);
     }
 
     showBook(book) {
@@ -24,9 +24,11 @@ class Book {
       const bookTitle = document.createElement('p');
       const deleteBtn = document.createElement('BUTTON');
       deleteBtn.classList.add('btn-remove');
+
       const title = `"${book.title}" by ${book.author}`;
       bookTitle.textContent = title;
       deleteBtn.textContent = 'Remove';
+
       bookDiv.appendChild(bookTitle);
       bookDiv.appendChild(deleteBtn);
       bookContainer.appendChild(bookDiv);

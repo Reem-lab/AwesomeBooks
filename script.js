@@ -52,27 +52,30 @@ class Book {
       this.showBook(book);
     }
 }
-function addMessage() {
-  const alert = document.createElement('p');  
-  const parent = document.querySelector('.btnAdd');
-  alert.textContent = "Book already added";
-  alert.classList.add('alert');
-  parent.appendChild(alert);
-}
+
+
+const msg = document.querySelector('#errorMsg');
+const exbtn = document.createElement('button');
 
 function checkRepetition(book) {
   for (let i = 0; i < Book.collection.length; i += 1) {
     const currentBook = Book.collection[i];
     if (currentBook.title.toLowerCase() === book.title.toLowerCase()
     && currentBook.author.toLowerCase() === book.author.toLowerCase()) {
-      setTimeout(addMessage(), 3000);     
-      
-      //alert('Book already added');
+       msg.textContent = ' ❗ This Book is Already in the list';
+         exbtn.textContent = 'X'
+         exbtn.classList.add('close-modal');
+         msg.appendChild(exbtn);
+
       return false;
     }
   }
   return true;
 }
+
+exbtn.addEventListener('click', function(){
+  msg.classList.add('hidden');
+})
 
 function addBookToLibrary() {
   const inputTitleValue = inpTitle.value;
@@ -82,6 +85,7 @@ function addBookToLibrary() {
     book.saveBooks();
   }
 }
+
 
 const book = new Book();
 const form = document.querySelector('.form');

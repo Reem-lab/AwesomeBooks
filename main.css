@@ -28,8 +28,7 @@
 }
 
 .hidden {
-  display: none;
-  opacity: 0;
+  display: none;  
 }
 
 .close-modal {

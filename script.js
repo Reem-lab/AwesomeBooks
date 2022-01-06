@@ -102,30 +102,26 @@ document.addEventListener('DOMContentLoaded', () => {
   book.iterateBooks();
 });
 
-//navigation 
+// navigation
 const [list, addNew, contact] = document.querySelectorAll('.link');
-const allBooks = document.querySelector('.book-container');
 const contactSection = document.querySelector('.contact-section');
-const formSection = document.querySelector('.form');
 const sec = document.querySelector('.sec');
+const sec1 = document.querySelector('.sec1');
 
 list.addEventListener('click', () => {
-  allBooks.classList.remove('hidden');
   contactSection.classList.add('hidden');
-  formSection.classList.add('hidden');
+  sec1.classList.add('hidden');
   sec.classList.remove('hidden');
 });
 
 addNew.addEventListener('click', () => {
-  allBooks.classList.add('hidden');
   contactSection.classList.add('hidden');
-  formSection.classList.remove('hidden');
-  sec.classList.remove('hidden');
+  sec1.classList.remove('hidden');
+  sec.classList.add('hidden');
 });
 
 contact.addEventListener('click', () => {
-  allBooks.classList.add('hidden');
   contactSection.classList.remove('hidden');
-  formSection.classList.add('hidden');
+  sec1.classList.add('hidden');
   sec.classList.add('hidden');
 });

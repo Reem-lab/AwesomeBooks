@@ -79,8 +79,8 @@
 }
 
 .book-container button {
-  border: 2px solid lemonchiffon;
-  background-color: lightcoral;
+  border: 2px solid black;
+  background-color: brown;
   font-weight: bold;
   font-size: 15px;
 }
@@ -121,10 +121,38 @@
   background-color: brown;
 }
 
+.header {
+  margin: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  column-gap: 15px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  background-color: lightcoral;
+  padding: 5px;
+}
+
 @media screen and (min-width: 772px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+
   .sec {
     padding: 10px 150px 150px 150px;
-    background-color: indianred;
+    background-color: blanchedalmond;
     border-radius: 12px;
   }
 
@@ -132,7 +160,33 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color: lemonchiffon;
+    background-color: blanchedalmond;
     margin: 35px;
+  }
+
+  .footer {
+    border: 5px solid black;
+    margin-top: 90px;
+    margin-right: 40px;
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blanchedalmond;
+  }
+
+  .head4 {
+    font-size: 35px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .para {
+    font-size: 30px;
+    font-weight: bold;
   }
 }
